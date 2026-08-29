@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Галина](https://up.htmlacademy.ru/htmlcss-individual/3/user/2719393).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/angra).
 
 ---
 
