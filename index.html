@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles/styles.css">
     <title>HTML Academy: Седона</title>
   </head>
 
@@ -35,17 +36,19 @@
               <span class="favorite-count">12</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Хочу сюда!</a>
+          <li class="navigation-item-button">
+            <a class="button" href="catalog.html">
+              <span class="navigation-title">Хочу сюда!</span>
+            </a>
           </li>
         </ul>
       </nav>
     </header>
-
     <main class="main-index">
       <section class="hero">
         <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-        <img class="hero" src="images/svg/hero-welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!" />
+        <img class="hero-image" src="images/svg/hero-welcome.svg" width="458" height="352"
+          alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!" />
       </section>
       <section class="main-lead">
         <h2 class="lead">
@@ -63,7 +66,8 @@
             <p class="advantages-description">
               Седона — не аттракцион для туристов, там течёт своя жизнь
             </p>
-            <img class="advantages-img town-architecture" src="images/section-advantages/square-sedona.jpg" width="800" height="385" alt="Улица Седоны" />
+            <img class="advantages-img" src="images/section-advantages/square-sedona.jpg" width="800"
+              height="385" alt="Улица Седоны" />
           </li>
           <li class="advantages-item">
             <h3 class="advantages-title">Небольшая площадь</h3>
@@ -88,7 +92,8 @@
             <p class="advantages-description">
               Да, по нему можно пройти! Если вы осмелитесь, разумеется
             </p>
-            <img class="advantages-img devil-bridge" src="images/section-advantages/devils-bridge.jpg" width="800" height="385" alt="Мост дьявола" />
+            <img class="advantages-img" src="images/section-advantages/devils-bridge.jpg" width="800"
+              height="385" alt="Мост дьявола" />
           </li>
         </ul>
       </section>
@@ -125,7 +130,7 @@
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
-        <button class="btn-hotel-search" type="button">
+        <button class="button" type="button">
           <span class="title-btn">Поиск гостиницы в Седоне</span>
         </button>
       </section>
@@ -138,7 +143,7 @@
           <label for="email" class="visually-hidden">Введите ваш e-mail</label>
           <input type="email" id="email" name="email" placeholder="Ваш e-mail" required />
           <!-- required - обязательное к заполнению поле  -->
-          <button class="button" type="submit">Подписаться</button>
+          <button class="button-subscription title-btn" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
@@ -147,17 +152,17 @@
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social-list">
           <li class="social-item">
-            <a class="button" href="https://vk.com/htmlacademy">
+            <a class="social-link social-link-vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="button" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Телеграмм</span>
+            <a class="social-link social-link-telegram" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="social-link social-link-youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Ютуб</span>
             </a>
           </li>
