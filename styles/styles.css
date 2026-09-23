@@ -55,9 +55,7 @@ html {
 
 body {
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 20px;
@@ -66,16 +64,16 @@ body {
   background-color: var(--background-basic-1);
 }
 
-/* Если добавить центриррование основного блока на этот div, то перестает работать sticky-footer и наоборот */
 .page-container {
   margin: 0 auto;
   width: 1200px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .main-container {
   flex-grow: 1;
-
-  margin: 0 auto;
 }
 
 .visually-hidden {
@@ -84,14 +82,15 @@ body {
 
 .page-header {
   display: flex;
-  width: 1060px;
   height: 64px;
-  margin: 0 auto;
+  padding: 0 70px;
+  position: relative;
 }
 
 .header-logo {
-  width: 138px;
-  height: 64px;
+  width: 140px;
+  height: 70px;
+  margin-right: 30px;
 }
 
 .button {
@@ -112,7 +111,7 @@ body {
 .navigation {
   display: flex;
   font-weight: 700;
-  width: 900px;
+  width: 100%;
 }
 
 .navigation-list {
@@ -121,7 +120,6 @@ body {
   width: 460px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
   font-size: 20px;
   line-height: 22px;
   text-transform: capitalize;
@@ -136,6 +134,7 @@ body {
 .navigation-link {
   color: var(--texts-texts-basic);
   text-decoration: none;
+  padding: 20px 16px;
 }
 
 .button.navigation-button-link {
@@ -179,20 +178,12 @@ body {
 }
 
 .main-lead {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   text-align: center;
-}
-
-.lead-wrapper {
-  width: 620px;
-  height: 406px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  padding: 95px 270px;
 }
 
 .lead {
@@ -200,6 +191,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .excerpt {
@@ -227,6 +219,11 @@ body {
 .advantages-item {
   text-align: center;
   background: var(--background-second-1);
+  min-height: 385px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 85px;
 }
 
 .advantages-description {
@@ -240,6 +237,18 @@ body {
   color: var(--texts-background-deafault);
   background: var(--buttons-second);
   grid-column: 1 / span 3;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+}
+
+.advantages-item-key-last {
+  flex-direction: row-reverse;
+}
+
+.advantages-item-key-text {
+  padding: 0 85px;
 }
 
 .advantages-description-key {
@@ -259,7 +268,7 @@ body {
 }
 
 .services-item {
-  height: 385px;
+  min-height: 385px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -286,10 +295,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.subscriprion-wrapper {
-  width: 684px;
+  flex-direction: column;
+  padding: 95px 258px 105px;
 }
 
 .subscription-excerpt {
@@ -315,16 +322,12 @@ body {
   color: var(--texts-texts-basic);
 }
 
-.footer-wrapper {
+.page-footer {
   display: flex;
-  width: 1060px;
   height: 120px;
   justify-content: center;
-  margin: 0 auto;
+  padding: 0 70px;
   align-items: center;
-}
-
-.page-footer {
   text-align: center;
 }
 
@@ -361,6 +364,7 @@ body {
   min-width: 331px;
   min-height: 40px;
   text-decoration: none;
+  padding: 45px 0 35px;
 }
 
 .htmlacademy-link {
@@ -372,14 +376,18 @@ body {
 }
 
 .inner-header {
+  display: flex;
+  flex-direction: column;
   background-color: var(--background-basic-4);
   background-image: url("../images/background/background-inner-header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  min-height: 416px;
 }
 
 .inner-header-title {
+  margin: 35px 70px;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
@@ -406,6 +414,7 @@ body {
 
 .blreadcrumbs-orderedlist {
   list-style-type: none;
+  margin: 8px 70px 0;
 }
 
 .blreadcrumbs-orderedlist:first-child {
@@ -421,6 +430,12 @@ body {
   color: var(--texts-background-deafault);
 }
 
+.catalog-filters {
+  display: flex;
+  align-items: center;
+  margin: 40px 70px 70px;
+}
+
 .catalog-filter-list {
   list-style-type: none;
 }
@@ -431,6 +446,17 @@ body {
   line-height: 24px;
   text-transform: capitalize;
   color: var(--texts-background-deafault);
+}
+
+.catalog-filter-group {
+  margin-right: 70px;
+}
+
+.hotels-showing {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
 }
 
 .controll {
@@ -457,7 +483,13 @@ body {
 }
 
 .hotels-list {
+  width: 1060px;
+  margin: 40px auto 80px;
   list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
 }
 
 .hotel-card-link {
@@ -515,6 +547,10 @@ body {
 
 .pagination-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 8px;
 }
 
 .pagination-link {
@@ -532,7 +568,9 @@ body {
   width: 60px;
   height: 60px;
   background: var(--buttons-second);
-  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pagination-current {
