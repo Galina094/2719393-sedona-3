@@ -27,12 +27,12 @@
           </ul>
           <ul class="navigation-list navigation-user">
             <li class="navigation-item">
-              <a class="navigation-link" href="search.html">
+              <a class="navigation-link navigation-user-link navigation-user-link-search" href="search.html">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="selected.html">
+              <a class="navigation-link navigation-user-link navigation-user-link-favorite-count" href="selected.html">
                 <span class="visually-hidden">Отелей в избранном:</span>
                 <span class="favorite-count">12</span>
               </a>
@@ -53,7 +53,7 @@
         </section>
         <section class="main-lead">
           <h2 class="lead">
-            Седона — небольшой городок в Аризоне, заслуживающий большего!
+            Седона — небольшой городок в Аризоне,<br> заслуживающий большего!
           </h2>
           <p class="excerpt">
             Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
@@ -110,28 +110,28 @@
           <h2 class="visually-hidden">Рекомендуемые услуги</h2>
           <ul class="services-list">
             <li class="services-item advantages-item">
-              <h3 class="services-title advantages-title">Жилье</h3>
+              <h3 class="services-title-residence advantages-title">Жилье</h3>
               <p class="services-description advantages-description">
                 Рекомендуем пожить в настоящем мотеле, всё как в кино!
               </p>
             </li>
             <li class="services-item advantages-item">
-              <h3 class="services-title advantages-title">Еда</h3>
+              <h3 class="services-title-food advantages-title">Еда</h3>
               <p class="services-description advantages-description">
                 Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
               </p>
             </li>
             <li class="services-item advantages-item">
-              <h3 class="services-title advantages-title">Сувениры</h3>
+              <h3 class="services-title-present advantages-title">Сувениры</h3>
               <p class="services-description advantages-description">
                 Не только китайского, но и настоящего местного производства!
               </p>
             </li>
           </ul>
         </section>
-        <section class="main-lead">
-          <h2 class="lead">Заинтересовались?</h2>
-          <p class="excerpt">
+        <section class="main-lead main-lead-interes">
+          <h2 class="lead lead-interes">Заинтересовались?</h2>
+          <p class="excerpt excerpt-interes">
             Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие
             предложения гостиниц в Седоне
           </p>
@@ -140,11 +140,11 @@
           </button>
         </section>
         <section class="subscription">
-            <h2 class="lead">Подпишитесь на рассылку</h2>
+            <h2 class="lead lead-interes">Подпишитесь на рассылку</h2>
             <p class="excerpt subscription-excerpt">
               Только полезная информация и никакого спама,<br> честное бойскаутское!
             </p>
-            <form action="https://echo.htmlacademy.ru/" method="post">
+            <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
               <label for="email" class="visually-hidden">Введите ваш e-mail</label>
               <input class="subscription-placeholder" type="email" id="email" name="email" placeholder="Ваш e-mail"
                 required />
