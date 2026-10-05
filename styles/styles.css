@@ -90,16 +90,14 @@ body {
 .page-header {
   display: flex;
   padding: 0 70px;
-  position: relative;
 }
 
 .header-logo {
   max-width: 140px;
   height: 70px;
-  position: absolute;
-  margin: -6px;
-  z-index: 10;
-  top: 6px;
+  position: relative;
+  margin-bottom: -6px;
+  margin-right: 28px;
 }
 
 .button {
@@ -126,7 +124,6 @@ body {
 .navigation-list {
   margin: 0;
   padding: 0;
-  padding-left: 168px;
   width: 460px;
   display: flex;
   flex-wrap: wrap;
@@ -138,9 +135,16 @@ body {
 }
 
 .navigation-user {
+  margin: 0;
+  padding: 0;
+  width: 460px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   max-width: 310px;
   margin-left: auto;
   justify-content: flex-end;
+  list-style-type: none;
 }
 
 .navigation-link {
@@ -159,16 +163,15 @@ body {
 
 .navigation-user-link-search {
   background-image: url(../images/svg/search.svg);
+  background-repeat: no-repeat;
 }
-
-
 
 .navigation-user-link-favorite-count {
   background-image: url(../images/svg/heart.svg);
   background-repeat: no-repeat;
-  background-size: auto;
   background-position: center;
   position: relative;
+  margin-right: 20px;
 }
 
 .button.navigation-button-link {
@@ -176,6 +179,7 @@ body {
   display: block;
   padding: 8px 34px;
   min-width: 160px;
+  max-width: 200px;
   min-height: 36px;
   box-sizing: border-box;
 }
@@ -391,9 +395,14 @@ body {
   display: flex;
 }
 
+.subscription-form input{
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+}
+
 .button-subscription {
   width: 232px;
-  height: 52px;
   padding: 0;
   background: var(--buttons-second);
   border-radius: 0 4px 4px 0;
@@ -415,8 +424,8 @@ body {
 
 .page-footer {
   display: flex;
-  height: 120px;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 40px 70px 30px 70px;
   align-items: center;
   text-align: center;
@@ -429,13 +438,13 @@ body {
   max-width: 142px;
   padding: 0;
   margin: 0;
-  margin-right: 41.5px;
+  margin-right: 41px;
 }
 
 .social-link {
   display: block;
   min-width: 47px;
-  height: 40px;
+  height: 47px;
   background-position: center;
 }
 
@@ -459,7 +468,7 @@ body {
   font-size: 40px;
   line-height: 40px;
   color: var(--texts-texts-basic);
-  min-width: 720px;
+  width: 720px;
   min-height: 50px;
   text-decoration: none;
 }
@@ -468,9 +477,9 @@ body {
   background-image: url("../images/svg/logo-htmlacademy.svg");
   background-repeat: no-repeat;
   display: block;
-  width: 115px;
+  min-width: 115px;
   height: 33px;
-  margin-left: 41.5px;
+  margin-left: 41px;
 }
 
 .inner-header {
@@ -674,36 +683,38 @@ body {
 }
 
 .hotel-card {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: auto 1fr;
+  row-gap: 16px;
+  column-gap: 20px;
   padding: 20px;
-  box-sizing: border-box;
 }
 
 .hotel-card-link {
   text-decoration: none;
+  grid-column: 1/-1;
 }
 
 .hotel-card-image {
+  display: block;
   margin-bottom: 16px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hotel-card-title {
   color: var(--texts-texts-basic);
   text-transform: capitalize;
   margin: 0;
-  margin-bottom: 16px;
 }
 
 .hotel-card-type {
   color: var(--texts-second);
 }
 
-.wrapper-hotel-card-type {
-  display: flex;
-  justify-content: space-between;
-  width: 300px;
-  margin-bottom: 16px;
+.hotel-card-price{
+  margin-left: auto;
 }
 
 .hotel-link-title {
@@ -718,24 +729,19 @@ body {
 .hotel-card-information {
   background-color: var(--texts-hover);
   border-radius: 4px;
+  border-color: transparent;
   text-decoration: none;
-  display: inline-block;
   padding: 8px 26px;
-  box-sizing: border-box;
-  width: 140px;
-  height: 36px;
-  margin-right: auto;
-  margin-bottom: 16px;
 }
 
 .hotel-link-box-blue {
   background: var(--buttons-second);
   padding: 0;
-  margin-right: 0;
 }
 
 .hotel-link-box-grey {
   background: var(--forms-elements-2);
+  padding: 8px 22px;
 }
 
 .hotel-link-title-weight {
@@ -746,7 +752,6 @@ body {
 .hotel-link-box-green {
   background: var(--buttons-select);
   padding: 0;
-  margin-right: 0;
 }
 
 .subscription-inner {
