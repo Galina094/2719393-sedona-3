@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>HTML Academy: Седона</title>
   </head>
 
@@ -136,16 +137,16 @@
           <button class="button" type="button">Поиск гостиницы в Седоне</button>
         </section>
         <section class="subscription">
-            <h2 class="lead lead-interes">Подпишитесь на рассылку</h2>
-            <p class="excerpt subscription-excerpt">
-              Только полезная информация и никакого спама,<br> честное бойскаутское!
-            </p>
-            <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-              <label for="email" class="visually-hidden">Введите ваш e-mail</label>
-              <input class="subscription-placeholder" type="email" id="email" name="email" placeholder="Ваш e-mail"
-                required />
-              <button class="button-subscription" type="submit">Подписаться</button>
-            </form>
+          <h2 class="lead lead-interes">Подпишитесь на рассылку</h2>
+          <p class="excerpt subscription-excerpt">
+            Только полезная информация и никакого спама,<br> честное бойскаутское!
+          </p>
+          <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label for="email" class="visually-hidden">Введите ваш e-mail</label>
+            <input class="subscription-placeholder" type="email" id="email" name="email" placeholder="Ваш e-mail"
+              required />
+            <button class="button-subscription" type="submit">Подписаться</button>
+          </form>
         </section>
       </main>
       <footer class="page-footer">
@@ -177,6 +178,76 @@
           <span class="visually-hidden">Логотип разработчика сайта</span>
         </a>
       </footer>
+    </div>
+    <div class="modal-container" id="search-modal-container">
+      <div class="modal">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-contant">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="form-search" id="form-search" action="https://echo.htmlacademy.ru/" metod="post">
+            <div class="form-row">
+              <label class="form-label" for="checkin">Дата Заезда:</label>
+              <div>
+                <div class="date-control">
+                  <input class="date-input" type="text" id="checkin" name="checkin" value="27 апреля 2020" required>
+                  <span class="calendar-icon" aria-hidden="true">▦</span>
+                </div>
+                <p class="form-message form-message-error">
+                  Мы не можем отправить вас в прошлое.
+                </p>
+              </div>
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="checkout">Дата Выезда:</label>
+              <div>
+                <div class="date-control">
+                  <input class="date-input" type="text" id="checkout" name="checkout" value="1 сентября 2023" required>
+                  <span class="calendar-icon" aria-hidden="true">▦</span>
+                </div>
+                <p class="form-message form-message-info">
+                  На эти даты есть свободные номера. Пока есть.
+                </p>
+              </div>
+            </div>
+            <div class="guests">
+              <div class="guests-group">
+                <label class="guests-label" for="adults">
+                  Взрослые:
+                </label>
+                <div class="counter">
+                  <button class="counter-button" type="button" data-action="minus" data-target="adults"
+                    aria-label="Уменьшить количество взрослых">−</button>
+                  <input class="counter-input" type="number" id="adults" name="adults" value="2" min="1" max="20">
+                  <button class="counter-button" type="button" data-action="plus" data-target="adults"
+                    aria-label="Увеличить количество взрослых">+</button>
+                </div>
+              </div>
+              <div class="guests-group">
+                <div class="guests-label">
+                  <label for="children">Дети:</label>
+                  <div class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-label="Информация о размещении детей"
+                      aria-describedby="children-tooltip">i</button>
+                    <span class="tooltip-text" id="children-tooltip" role="tooltip">
+                      Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                    </span>
+                  </div>
+                </div>
+                <div class="counter">
+            <button class="counter-button" type="button" data-action="minus" data-target="children" aria-label="Уменьшить количество детей">−</button>
+            <input class="counter-input" type="number" id="children" name="children"       value="2" min="0" max="20">
+            <button class="counter-button" type="button" data-action="plus"                data-target="children" aria-label="Увеличить количество детей">+</button>
+          </div>
+        </div>
+      </div>
+      <button class="search-button button-subscription" type="submit">
+        Найти
+      </button>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 
